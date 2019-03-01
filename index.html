@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Area Calculator</title>
+  <title>String Checker</title>
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
   <!-- Bootstrap core CSS -->
@@ -14,18 +14,19 @@
 
 <body>
   <main class="container-fluid">
-        <h1>Given radius, display area</h1>
+    <h1>Given a course name and max length, display how many characters remaining</h1>
     <h1>JavaScript for interactive apps!</h1>
     <h3>Right-click / Inspect, then select console</h3>
 
-    <p>Enter your number:
-      <input id="radius" type="number">
+    <p>Enter name:
+      <input id="name" type="string">
     </p>
+    <p>Enter number:<input id="num" type="number"></p>
 
-   
-<button id="clicker" class="btn btn-primary">Click me!</button>
 
-    <p id="Area of the circle"></p>
+    <button id="clicker" class="btn btn-primary" onclick="clickme()">Click me!</button>
+
+    <p id="length is"></p>
 
   </main>
 
@@ -34,27 +35,26 @@
 
     console.log('Declare testable functions.....................')
 
-    
-    function sqrt(x){
-              
-              console.log(x);
-              document.getElementById("radius").value = x*x;
-            }
-    
-    
-console.log('sqrt' *sqrt)
+
+
+
+
     console.log('Declare event listeners .......................')
 
-    document.getElementById('clicker').addEventListener('radius', function () {
-     
-       x = parseInt(document.getElementById('radius').value)
+    function clickme() {
+      x = parseInt(document.getElementById('num').value)
       console.log('x=' + x)
-     const Area= math.pi*sqrt(x)
-      consloe.log('area' +Area )
-      const ans = s + ', your area is ' + Area + '.'
-      document.getElementById('Area of the circle').innerHTML = ans
-      return this.Area + ', your area is ' + Area + '.'
-    })
+      y = document.getElementById("name").value
+      console.log('y=' + y)
+      let length = x - y.length
+
+      const ans = ' Length is ' + length + '.'
+      document.getElementById('length is').innerHTML = ans
+
+
+    }
+
+
 
     console.log('SCRIPT END')
   </script>
